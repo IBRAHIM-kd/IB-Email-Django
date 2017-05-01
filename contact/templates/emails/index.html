@@ -1,0 +1,26 @@
+{% extends 'emails/base.html' %}
+{% load static 
+
+{% block body %}
+
+	<div id="wrap">
+		<h1>Drop me a Message!</h1>
+		<div id='form_wrap'>
+			<form id="contact-form" action="" form method="post">
+    {% csrf_token %}
+
+		<p id="formstatus"></p>
+				<p>Hello IBRAHIM ABDULLAHI,</p>
+				<label for="email">Your Message : </label>
+				<textarea  name="message" value="Your Message" id="message" ></textarea>
+				<p>Best,</p>	
+				<label for="name">Name: </label>
+				<input type="text" name="name" value="" id="name" />
+				<label for="email">Email: </label>
+				<input type="text" name="email" value="" id="email" />
+				<input type="submit" name ="submit" value="OK I want to send it now, thanks!" />
+			</form>
+		</div>
+	</div>
+
+{% endblock %}
